@@ -118,29 +118,26 @@ end
 
 
 if __FILE__ == $0
-    az = 'az_mesa_2020_04_01.csv'
-    azshort = 'az_mesa_short.csv'
-    vt = 'vt_burlington_2020_04_01.csv'
-    vt = 'vt_burlington_short.csv'
-    wy = 'wy_statewide_2020_04_01.csv'
+    co = 'co.csv'
+    fl = 'fl.csv'
 
-    p outcome_types(vt)
-    #p outcome_types2(vt)
-    #p outcome_types3(vt)
-    #p any_type_set(vt, 'outcome')
-    #p any_type_set(vt, 'raw_race')
-    #p any_type_set(vt, 'subject_race')
+    p outcome_types(co)
+    p outcome_types2(co)
+    p outcome_types3(co)
+    p any_type_set(co, 'outcome')
+    p any_type_set(co, 'raw_race')
+    p any_type_set(co, 'subject_race')
     
-    #p day_of_week(vt) 
-    #p day_of_week(vt).sort_by(&:first).map(&:last)
+    #p day_of_week(co) 
+    #p day_of_week(co).sort_by(&:first).map(&:last)
 
-    #p any_type_hash(vt, 'outcome')
+    p any_type_hash(co, 'raw_race')
 
-    #p any_type_hash2(vt, 'date', method(:cwday)).sort_by(&:first).map(&:last)
-    #p any_type_hash2(vt, 'outcome')
-    #p any_type_hash2(vt, 'violation')
-    #p any_type_hash2(vt, 'time', method(:hour)).sort_by(&:first).map(&:last)
+    #p any_type_hash2(co, 'date', method(:cwday)).sort_by(&:first).map(&:last)
+    #p any_type_hash2(co, 'outcome')
+    p any_type_hash2(co, 'type')
+    p any_type_hash2(co, 'time', method(:hour)).sort_by(&:first).map(&:last)
 
-    #parse_all(vt)
+    parse_all(co)
 
 end
